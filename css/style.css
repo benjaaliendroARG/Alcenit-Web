@@ -1,0 +1,839 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #102B49;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    width: 100%;
+    height: 90px;
+    background: #ffffff;
+    position: relative;
+    z-index: 20;
+}
+
+.header-contenido {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 90px;
+    border-radius: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.menu a {
+    color: #102B49;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    left: 10px;
+}
+
+.menu a:hover {
+    color: #168BD0;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    width: 100%;
+    height: 610px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 47, 86, 0.92) 0%,
+            rgba(5, 47, 86, 0.72) 35%,
+            rgba(5, 47, 86, 0.10) 75%
+        );
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   DRAGÓN DORADO DEL HERO
+======================================== */
+
+.dragon-dorado {
+    position: absolute;
+
+    width: 520px;
+
+    right: -110px;
+    top: -40px;
+
+    opacity: 0.65;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTENIDO DEL HERO
+======================================== */
+
+.hero-contenido {
+    position: absolute;
+
+    left: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 500px;
+
+    z-index: 3;
+
+    color: #ffffff;
+}
+
+.hero-contenido h1 {
+    font-size: 60px;
+    line-height: 0.98;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.hero-contenido p {
+    max-width: 470px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.hero-botones {
+    display: flex;
+    gap: 14px;
+}
+
+.boton {
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.boton-principal {
+    background: #168BD0;
+    color: #ffffff;
+}
+
+.boton-principal:hover {
+    background: #0D6EA9;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    border: 3px solid #F4C542;
+    background: rgba(0, 0, 0, 0.20);
+    color: #ffffff;
+}
+
+.boton-secundario:hover {
+    background: #F4C542;
+    color: #102B49;
+}
+
+
+/* ========================================
+   FRASE
+======================================== */
+
+.frase {
+    background: #EAF5FF;
+
+    padding: 24px 0;
+}
+
+.frase-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.frase h2 {
+    color: #102B49;
+
+    font-size: 22px;
+
+    text-align: center;
+}
+
+.frase span {
+    color: #168BD0;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+.titulo-seccion {
+    text-align: center;
+
+    color: #102B49;
+
+    font-size: 31px;
+
+    font-weight: 900;
+
+    margin-bottom: 50px;
+}
+
+
+/* ========================================
+   SERVICIOS
+======================================== */
+
+.servicios {
+    padding: 80px 0;
+
+    background: #ffffff;
+}
+
+.servicios-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.servicio {
+    min-height: 285px;
+
+    padding: 32px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #E2E8EF;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            16,
+            43,
+            73,
+            0.07
+        );
+
+    transition: 0.3s;
+}
+
+.servicio:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(
+            16,
+            43,
+            73,
+            0.12
+        );
+}
+
+.icono {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #EAF5FF;
+
+    color: #168BD0;
+
+    font-size: 30px;
+}
+
+.servicio h3 {
+    color: #102B49;
+
+    font-size: 17px;
+
+    line-height: 1.25;
+
+    margin-bottom: 16px;
+}
+
+.servicio p {
+    color: #53677C;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   DESTINOS
+======================================== */
+
+.destinos {
+    padding: 75px 0 100px;
+
+    background: #ffffff;
+}
+
+.destinos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 45px;
+
+    align-items: end;
+
+    position: relative;
+}
+
+.destino {
+    text-align: center;
+}
+
+.destino img {
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    margin-bottom: 20px;
+}
+
+.destino h3 {
+    color: #102B49;
+
+    font-size: 19px;
+
+    margin-bottom: 13px;
+}
+
+.destino a {
+    color: #168BD0;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.destino a:hover {
+    color: #0D6EA9;
+}
+
+
+/* ========================================
+   DRAGÓN EN AVIÓN
+======================================== */
+
+.dragon-avion {
+    position: absolute;
+
+    width: 210px;
+
+    right: -65px;
+
+    bottom: -30px;
+
+    z-index: 3;
+}
+
+
+/* ========================================
+   SECCIÓN OSCURA
+======================================== */
+
+.comienza {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 75px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #151515,
+            #272727
+        );
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   DRAGÓN OSCURO
+======================================== */
+
+.dragon-comienza {
+    position: absolute;
+
+    width: 500px;
+
+    left: -10px;
+    bottom: -400px;
+
+    opacity: 0.4;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+/* ========================================
+   CONTENIDO SECCIÓN OSCURA
+======================================== */
+
+.comienza-contenido {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.comienza-texto h2 {
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.comienza-texto h2 span {
+    color: #F4C542;
+}
+
+.comienza-texto > p {
+    max-width: 570px;
+
+    color: #D8D8D8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+.comienza-texto h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.telefonos {
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    line-height: 1.7 !important;
+
+    margin-bottom: 0 !important;
+}
+
+
+/* ========================================
+   BENEFICIOS
+======================================== */
+
+.beneficios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+.beneficio {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding-left: 17px;
+
+    border-left: 2px solid #F4C542;
+}
+
+.beneficio strong {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.beneficio span {
+    color: #D0D0D0;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    background: #101010;
+
+    padding: 25px 0;
+
+    color: #ffffff;
+}
+
+.footer-contenido {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer img {
+    width: 100px;
+    border-radius: 15px;
+}
+
+.footer p {
+    color: #BDBDBD;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .menu {
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero-contenido {
+        width: 450px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 50px;
+    }
+
+    .dragon-dorado {
+        width: 430px;
+        right: -120px;
+    }
+
+    .servicios-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .comienza-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .dragon-comienza {
+        width: 380px;
+
+        right: -120px;
+    }
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: auto;
+
+        padding: 18px 0;
+    }
+
+    .header-contenido {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 680px;
+    }
+
+    .dragon-dorado {
+        width: 300px;
+
+        right: -100px;
+        top: -20px;
+
+        opacity: 0.65;
+    }
+
+    .hero-contenido {
+        left: 5%;
+        right: 5%;
+
+        top: 55%;
+
+        width: auto;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(
+                5,
+                47,
+                86,
+                0.82
+            );
+    }
+
+    .hero-contenido h1 {
+        font-size: 40px;
+    }
+
+    .hero-contenido p {
+        font-size: 15px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+
+    /* FRASE */
+
+    .frase-contenido {
+        gap: 12px;
+    }
+
+    .frase h2 {
+        font-size: 17px;
+    }
+
+    .frase span {
+        font-size: 18px;
+    }
+
+
+    /* SERVICIOS */
+
+    .servicios {
+        padding: 60px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 24px;
+
+        margin-bottom: 35px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* DESTINOS */
+
+    .destinos {
+        padding: 60px 0;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destino img {
+        height: 230px;
+    }
+
+    .dragon-avion {
+        position: relative;
+
+        width: 150px;
+
+        right: auto;
+        bottom: auto;
+
+        margin: 15px auto 0;
+    }
+
+
+    /* SECCIÓN OSCURA */
+
+    .comienza {
+        padding: 60px 0;
+    }
+
+    .comienza-texto h2 {
+        font-size: 34px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .dragon-comienza {
+        width: 300px;
+
+        right: -120px;
+
+        bottom: -80px;
+
+        opacity: 0.06;
+    }
+
+
+    /* FOOTER */
+
+    .footer-contenido {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
